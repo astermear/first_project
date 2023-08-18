@@ -11,4 +11,3 @@ let lastFilm = prompt("Один из последних посмотренных
 let rateLastFilm = +prompt("Как вы его оцените(от 1 до 10)?", "");
 personalMovieDB.movies[lastFilm] = rateLastFilm;
 
-console.log(personalMovieDB);
