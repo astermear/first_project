@@ -3,7 +3,7 @@ do
 {
     numberOfFilms = +prompt("Сколько фильмов вы посмотрели?", "");
 }
-while(!numberOfFilms);
+while(!numberOfFilms || numberOfFilms < 0);
 
 let personalMovieDB = {
     count : numberOfFilms,
@@ -12,6 +12,20 @@ let personalMovieDB = {
     genres : [],
     privat : false
 };
+
+if (personalMovieDB <= 10)
+    {
+        alert("Просмотрено довольно мало фильмов!");
+    }
+else if(personalMovieDB <= 30)
+    {
+        alert("Вы классический зритель!");
+    }
+else
+    {
+        alert("Вы киноман!");
+    }
+
 
 for (let i = 0; i < 2; i++)
 {
