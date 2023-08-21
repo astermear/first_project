@@ -63,6 +63,12 @@ function detectPersonalLevel() {
 
 }
 
+function showMyDB() {
+    if(!personalMovieDB.privat) {
+        console.log(personalMovieDB);
+    }
+}
+
 
 
 
