@@ -69,7 +69,13 @@ function showMyDB() {
     }
 }
 
-
+function writeYourGenres() {
+    let answerUser;
+    for (let i = 1; i <= 3; i++) {
+        answerUser = prompt(`Ваш любимый жанр под номером ${i}?`, "");
+        personalMovieDB.genres[i - 1] = answerUser;
+    }
+}
 
 
 
