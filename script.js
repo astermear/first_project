@@ -58,8 +58,17 @@ let personalMovieDB = {
         let answerUser;
         for (let i = 1; i <= 3; i++) {
             answerUser = prompt(`Ваш любимый жанр под номером ${i}?`, "");
+            while(!answerUser)
+            {
+                answerUser = prompt(`Ваш любимый жанр под номером ${i}?`, "");
+            }
             personalMovieDB.genres[i - 1] = answerUser;
-    }
+            answerUser = "";
+        }
+        this.genres.forEach((item, i) => console.log(`Любимый жанр ${i + 1} - ${item}`));
+    },
+    toggleVisibleDB: function() {
+        this.privat = !privat
     }
     
 };
